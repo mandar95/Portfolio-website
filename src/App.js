@@ -41,7 +41,7 @@ if(isTrue){
           </p></section>
         <section id="projects">
           <h1 className="group-title project" style={{color:isTrue ?'#fff':'#343a40'}}>Let's talk</h1>
-          <ul><li className="bubble ml"><a><h2>Enducation</h2><p>BSC IT(2017) from Mumbai University</p></a>
+          <ul><li className="bubble ml"><a><h2>Education</h2><p>BSC IT(2017) from Mumbai University</p></a>
           </li><li className="bubble datm"><a><h2>Work Experience</h2><p>5 year as Application Frontend Developer</p></a>
             </li><li className="bubble gtb"><a><h2>My Passion</h2><p>Web surfing, Dancing, Reading</p></a></li>
             <li className="bubble mand"><a><h2>What i can do</h2><p>Javascript, Typescript, ReactJS, React Native, NodeJS, &amp; HTML5+CSS3</p></a></li>
