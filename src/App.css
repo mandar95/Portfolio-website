@@ -1,28 +1,43 @@
 body {
-  background-color: rgb(62, 64, 73) !important;
-  color: #fff!important;
-  line-height: 20px!important;
-  font-family: "Raleway",Helvetica,Arial,sans-serif!important;
+  color: #FFF !important;
+  line-height: 20px !important;
+  font-family: 'Raleway', Helvetica,Arial,sans-serif !important;
+  
 }
+/* body, select, input, textarea {
+  /* font-family: "Raleway","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif !important; */
+  
 
-.my_Nav {
-  margin-bottom: -100px;
+.App {
+  text-align: center;
 }
-
-.navbar {
-  position: unset!important;
+.navbar{
+  position: unset !important;
+  background-color: #343a40 !important
 }
-
+.my_Nav{
+margin-bottom: -100px;
+position: fixed;
+width: 100%;
+z-index: 999999;
+}
+.my-img{
+  /* background:url("./images/2.jpeg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 295px;
+  width: 295px;
+  margin: auto;
+  display: inline-table
+}
 #site-title {
   float: left;
   clear: both;
-  color: white;
 }
-
 .toggler {
   position: relative;
   display: block;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 30px;
   letter-spacing: -1px;
   line-height: 41px;
@@ -30,186 +45,728 @@ body {
   padding-right: 24px;
 }
 
-a:link, a:visited {
-  color: inherit;
-  text-decoration: none;
-  transition: opacity .2s ease;
-  opacity: 1;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.inner {
-  padding-top: 120px;
-}
-
-#bio {
-  position: relative;
-  padding: 20px;
-  width: 100%;
-  max-width: 520px;
-  margin: 0 auto 60px;
-  border-radius: 4px;
-  background: #cf4858;
-}
-
-#bio h1, #bio p {
-  line-height: 25px;
-}
-#bio p {
-  margin: 0 0 15px;
-}
-
-#bio h1 {
-  font-weight: 700;
-  font-size: 28px;
-  margin-bottom: 25px;
-}
-#bio:after {
-  width: 0;
-  height: 0;
-  border-left: 0 solid transparent;
-  border-right: 34px solid transparent;
-  border-top: 23px solid #cf4858;
-  position: absolute;
-  bottom: -22px;
-  content: "";
-  display: block;
-  margin: 0 20px;
-  left: auto;
-  right: 28px;
-  transform: scaleX(1);
-}
-
-#bio a {
-  background: #ad2d3c;
-  padding: 0 4px;
-  border-radius: 4px;
-}
-
-#connect, #projects {
-  width: 100%;
-  margin-bottom: 40px;
-}
-#connect:before, #projects:before {
-  content: " ";
-  display: table;
-}
-#connect:after, #projects:after {
+#projects:after, #connect:after {
   content: " ";
   display: table;
   clear: both;
 }
+#projects:before, #connect::before
+{
+  content: " ";
+    display: table;
+}
 
+  .inner {
+    /* padding-top: 120px; */
+    
+    padding-top: 80px;
+
+  }
+/* left content */
+  #bio {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 60px auto;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: #CF4858;
+}
 
 .group-title {
-  font-weight: 400;
+  font-weight: normal;
   font-size: 24px;
   line-height: 25px;
   text-transform: uppercase;
   letter-spacing: -1px;
   margin: 0 0 20px 20px;
 }
-
-#connect ul, #projects ul {
+#projects ul, #connect ul {
   list-style: none;
+  margin: 0;
   padding: 0;
   margin: 0 auto;
   max-width: 320px;
   text-align: left;
 }
-
-.bubble {
-  transform: translateZ(0);
-  overflow: visible;
+#projects, #connect {
+  width: 100%;
+  margin-bottom: 40px;
 }
-.bubble a {
+#projects .bubble:nth-child(odd),#connect .bubble:nth-child(odd) {
+  float: left;
+}
+#projects .bubble:nth-child(even),#connect .bubble:nth-child(even) {
+  float: right;
+}
+
+.bubble a{
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   transform: translateZ(0);
   display: block;
   position: relative;
   padding: 20px;
   margin-bottom: 20px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   border-radius: 4px;
-  transition: transform .2s ease!important;
+  -moz-transition: -moz-transform .2s ease;
+  -o-transition: -o-transform .2s ease;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: transform .2s ease !important;
+}
+.bubble a:hover {
+  opacity: 1 !important;
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .bubble h2 {
-  font-weight: 700;
+  font-weight: bold;
   font-size: 28px;
   line-height: 25px;
   margin-bottom: 5px;
 }
-
-.bubble a :last-child {
+.bubble a *:last-child {
   margin-bottom: 0;
 }
-
 .bubble a p {
   line-height: 20px;
 }
-@keyframes float-a {
-  50% {
-    transform: translateY(5px);
-}
-}
-@keyframes float-b {
-  0% {
-    transform: translateY(5px);
-}
-
-50% {
-    transform: translate(0);
-}
-100% {
-    transform: translateY(5px);
-}
-}
-
-.bubble.ml {
-  animation: float-a 1.5s ease-in-out infinite;
-}
-.bubble.datm {
-  -webkit-animation: float-b 1.8s ease-in-out infinite;
-  animation: float-b 1.8s ease-in-out infinite;
-}
-
 .bubble.ml a {
   width: 187px;
-  background: #f6624a;
+  background: #F6624A;
 }
 .bubble.datm a {
   width: 220px;
-  background: #1b6a81;
+  background: #1B6A81;
+}
+.bubble.gtb a {
+  width: 190px;
+  background: #16A79D;
+}
+.bubble.mand a {
+  width: 230px;
+  margin-top:-11px;
+  background: #80628B;
+}
+.bubble.linkedin a {
+  width: 180px;
+  background: #097da9
+}
+.bubble.instagram a {
+  width: 200px;
+  background: #F4AC42;
+}
+.bubble.email a {
+  width: 230px;
+  background: #F6624A;
+}
+.bubble.whatsapp a {
+  width: 190px;
+  /* background: #5f6270; */
+  background: #1ebea5;
+}
+.bubble.github a {
+  width: 160px;
+  background: #5f6270;
+}
+.bubble.tumblr a {
+  width: 180px;
+  background: #1B6A81;
+}
+.bubble.lastfm a {
+  width: 170px;
+  background: #CF4858;
 }
 
-
-.bubble.datm a:after, .bubble.ml a:after {
-  border-left: 0 solid transparent;
-  border-right: 28px solid transparent;
+.bubble a:after{
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -17px;
+  content: '';
+  display: block;
+  margin: 0 20px;
+ 
 }
-
 .bubble.ml a:after {
-  border-top: 17px solid #f6624a;
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #F6624A;
   left: 1px;
   right: auto;
   transform: scaleX(-1);
 }
 .bubble.datm a:after {
-  border-top: 17px solid #1b6a81;
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #1B6A81;
   left: auto;
   right: -1px;
   transform: scaleX(1);
 }
+.bubble.gtb a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #16A79D;
+  left: 1px;
+  right: auto;
+  transform: scaleX(-1);
+}
+.bubble.mand a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #80628B;
+  left: auto;
+  right: -1px;
+  transform: scaleX(1);
+}
+.bubble.linkedin a:after {
 
-.bubble a:after {
-  width: 0;
-  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #097da9;
+  left: 1px;
+  right: auto;
+  transform: scaleX(-1);
+}
+.bubble.instagram a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #F4AC42;
+  left: auto;
+  right: -1px;
+  transform: scaleX(1);
+}
+.bubble.email a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #F6624A;
+  left: 1px;
+  right: auto;
+  transform: scaleX(-1);
+}
+.bubble.whatsapp a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #1ebea5;
+  left: auto;
+  right: -1px;
+  transform: scaleX(1);
+}
+.bubble.github a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #5f6270;
+  left: auto;
+  right: -1px;
+  transform: scaleX(-1);
+}
+.bubble.tumblr a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #1B6A81;
+  left: auto;
+  right: -1px;
+  transform: scaleX(1);
+}
+.bubble.lastfm a:after{
+  
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #CF4858;
+  left: auto;
+  right: -1px;
+  transform: scaleX(-1);
+}
+
+  @media (min-width: 1140px){
+
+#bio {
+    max-width: none;
+    width: 520px;
+    margin-left: 40px;
+}
+}
+@media (min-width: 940px){
+#bio {
+    float: left;
+    max-width: 49%;
+}
+#connect {
+  clear: both;
+}
+}
+@media (min-width: 568px){
+
+#bio {
+    padding: 40px;
+    margin: 0 auto 140px auto;
+}
+}
+
+#bio:after {
+  width: 0; 
+  height: 0; 
+  border-left: 0px solid transparent;
+    border-right: 34px solid transparent;
+    border-top: 23px solid #CF4858;
+    position: absolute;
+    bottom: -22px;
+    content: '';
+    display: block;
+    margin: 0 20px;
+    left: auto;
+    right: 28px;
+    transform: scaleX(1);
+}
+
+
+#bio h1 {
+    font-weight: bold;
+   
+    font-size: 28px;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+
+#bio p{
+  line-height: 25px;
+    margin: 0 0 15px 0;
+}
+@media only screen and (min-width: 568px){
+  .my_Nav{
+margin-bottom: 0px;
+  }
+  .navbar{
+    position: fixed !important;
+    z-index: 9999;
+    width: 100%;
+    padding:8px 120px !important;
+  }
+  #bio h1 {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 45px;
+    margin-bottom: 25px;
+}
+#bio p {
+  font-size: 20px;
+  line-height: 25px;
+  margin: 0 0 20px 0;
+}
+#bio:after {
+  width: 0; 
+  height: 0; 
+  border-left: 0px solid transparent;
+  border-right: 53px solid transparent;
+  border-top: 34px solid #CF4858;
   position: absolute;
-  bottom: -17px;
-  content: "";
+  bottom: -34px;
+  content: '';
   display: block;
   margin: 0 20px;
+  left: auto;
+  right: 28px;
+  transform: scaleX(-1);
 }
-#connect .bubble:nth-child(odd), #projects .bubble:nth-child(odd) {
+#bio:before {
+  border-left: 0px solid transparent;
+  border-right: 53px solid transparent;
+  border-top: 34px solid #CF4858;
+  position: absolute;
+  bottom: -34px;
+  content: '';
+  display: block;
+  margin: 0 20px;
+  left: auto;
+    right: -19px;
+    top: 0px;
+  transform: scaleX(1);
+
+  height: 20px;
+  width: 20px;
+  /* background:url("./images/template_share_sayhihalf_shareM_1598677483192.png"); */
+  clip-path:circle(50% at 50% 50%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+
+
+}
+#projects,#connect {
+  margin: 0 auto 80px auto;
+}
+#projects{
+  width: 500px;
+}
+#connect{
+ width: 530px;
+}
+.group-title{
+  float: left;
+  margin: 20px;
+}
+#projects .group-title {
+  width: 130px;
+}
+#connect .group-title {
+    width: 180px;
+}
+#projects ul, #connect ul {
+  max-width: none;
+  margin: 0;
+}
+#projects .bubble:nth-child(odd), #connect .bubble:nth-child(odd) {
   float: left;
 }
-#connect .bubble:nth-child(2n), #projects .bubble:nth-child(2n) {
-  float: right;
+#projects .bubble:nth-child(even), #connect .bubble:nth-child(even) {
+  float: left;
+}
+
+.bubble a{
+  margin-right: 20px;
+}
+.bubble.ml a {
+  margin-top: -30px;
+}
+.bubble.datm a {
+  margin-left: 60px;
+}
+.bubble.gtb a {
+  margin-top: 25px;
+  margin-right: 0;
+}
+.bubble.mand a {
+  margin-top: -5px;
+}
+.bubble.instagram a {
+  margin-top: -60px;
+}
+.bubble.email a {
+  margin-left: 70px;
+  margin-right: 0;
+}
+.bubble.whatsapp a {
+  margin-top: -60px;
+  margin-left: 70px;
+}
+.bubble.tumblr a {
+  margin-top: -60px;
+  margin-left: 20px;
+}
+
+.bubble.ml a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #F6624A;
+  left: auto;
+  right: -1px;
+  transform: scaleX(-1);
+}
+.bubble.datm a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #1B6A81;
+  left: auto;
+  right: -1px;
+  transform: scaleX(-1);
+}
+.bubble.gtb a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #16A79D;
+  left: 1px;
+  right: auto;
+  transform: scaleX(1);
+}
+.bubble.mand a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #80628B;
+  left: 1px;
+  right: auto;
+  transform: scaleX(1);
+}
+.bubble.linkedin a:after {
+
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #097da9;
+  left: 1px;
+  right: auto;
+  transform: scaleX(1);
+}
+.bubble.instagram a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #F4AC42;
+  left: 1px;
+  right: auto;
+  transform: scaleX(-1);
+}
+.bubble.email a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #F6624A;
+  left: auto;
+  right: -1px;
+  transform: scaleX(1);
+}
+.bubble.whatsapp a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #1ebea5;
+  left: auto;
+  right: -1px;
+  transform: scaleX(-1);
+}
+.bubble.github a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #5f6270;
+  left: 1px;
+  right: auto;
+  transform: scaleX(1);
+}
+.bubble.tumblr a:after {
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #1B6A81;
+  left: auto;
+  right: -1px;
+  transform: scaleX(-1);
+}
+.bubble.lastfm a:after{
+  
+  border-left: 0px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 17px solid #CF4858;
+  left: 1px;
+  right: auto;
+  transform: scaleX(1);
+}
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1140px){
+#projects{
+  float: left;
+  margin-left: 40px;
+} 
+}
+
+@media only screen and (min-width: 940px){
+  #projects {
+    margin-top: 140px;
+    float: right;
+}
+}
+
+
+
+
+
+#bio a {
+  background: #ad2d3c;
+  padding: 0 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+a:hover, a:focus {
+  color: inherit !important;
+  text-decoration: none !important;
+  opacity: .7 !important;
+  outline: 0;
+}
+a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+  -moz-transition: opacity .2s ease;
+  -o-transition: opacity .2s ease;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  opacity: 1;
+}
+  /* right content  */
+
+
+  
+
+
+  /* animation */
+  .bubble {
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    overflow: visible;
+}
+  .bubble.ml {
+    -moz-animation: float-a 1.5s ease-in-out infinite;
+    -webkit-animation: float-a 1.5s ease-in-out infinite;
+    animation: float-a 1.5s ease-in-out infinite;
+}
+.bubble.datm {
+  -moz-animation: float-b 1.8s ease-in-out infinite;
+  -webkit-animation: float-b 1.8s ease-in-out infinite;
+  animation: float-b 1.8s ease-in-out infinite;
+}
+.bubble.gtb {
+  -moz-animation: float-c 2s ease-in-out infinite;
+  -webkit-animation: float-c 2s ease-in-out infinite;
+  animation: float-c 2s ease-in-out infinite;
+}
+.bubble.mand {
+  -moz-animation: float-d 2.2s ease-in-out infinite;
+  -webkit-animation: float-d 2.2s ease-in-out infinite;
+  animation: float-d 2.2s ease-in-out infinite;
+}
+
+
+.bubble.linkedin {
+  -moz-animation: float-a 1.5s ease-in-out infinite;
+  -webkit-animation: float-a 1.5s ease-in-out infinite;
+  animation: float-a 1.5s ease-in-out infinite;
+}
+.bubble.instagram {
+  -moz-animation: float-b 1.8s ease-in-out infinite;
+  -webkit-animation: float-b 1.8s ease-in-out infinite;
+  animation: float-b 1.8s ease-in-out infinite;
+}
+.bubble.email {
+  -moz-animation: float-c 2s ease-in-out infinite;
+  -webkit-animation: float-c 2s ease-in-out infinite;
+  animation: float-c 2s ease-in-out infinite;
+}
+.bubble.whatsapp {
+  -moz-animation: float-d 2.2s ease-in-out infinite;
+  -webkit-animation: float-d 2.2s ease-in-out infinite;
+  animation: float-d 2.2s ease-in-out infinite;
+}
+.bubble.github {
+  -moz-animation: float-a 1.5s ease-in-out infinite;
+  -webkit-animation: float-a 1.5s ease-in-out infinite;
+  animation: float-a 1.5s ease-in-out infinite;
+}
+.bubble.tumblr {
+  -moz-animation: float-b 1.8s ease-in-out infinite;
+  -webkit-animation: float-b 1.8s ease-in-out infinite;
+  animation: float-b 1.8s ease-in-out infinite;
+}
+.bubble.lastfm {
+  -moz-animation: float-c 2s ease-in-out infinite;
+  -webkit-animation: float-c 2s ease-in-out infinite;
+  animation: float-c 2s ease-in-out infinite;
+}
+
+@keyframes float-a {
+  50% {
+    -moz-transform: translate(0, 5px);
+    -ms-transform: translate(0, 5px);
+    -webkit-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+}
+}
+@keyframes float-b{
+  0% {
+    -moz-transform: translate(0, 5px);
+    -ms-transform: translate(0, 5px);
+    -webkit-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+}
+50% {
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+100% {
+    -moz-transform: translate(0, 5px);
+    -ms-transform: translate(0, 5px);
+    -webkit-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+}
+}
+@keyframes float-c{
+  0% {
+    -moz-transform: translate(0, -10px);
+    -ms-transform: translate(0, -10px);
+    -webkit-transform: translate(0, -10px);
+    transform: translate(0, -10px);
+}
+50% {
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+100% {
+    -moz-transform: translate(0, -10px);
+    -ms-transform: translate(0, -10px);
+    -webkit-transform: translate(0, -10px);
+    transform: translate(0, -10px);
+}
+}
+@keyframes float-d{
+  50% {
+    -moz-transform: translate(0, 10px);
+    -ms-transform: translate(0, 10px);
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+}
+}
+#rm-illu {
+  position: relative;
+  left: 12px;
+  clear: both;
+  margin: -71px auto 0 auto;
+  width: 180px;
+}
+
+.illu{
+   background:url("https://60f17aff23f1bc17a5badd54--mandar95.netlify.app/static/media/download.9eab6070.png");
+  height: 328px;
+  /* width: 903px; */
+  background-position: center;
+  margin: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+
+ #copyright {
+ 
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: .5;
+  text-align: center;
+  margin: 0;
+  line-height: 50px;
 }
