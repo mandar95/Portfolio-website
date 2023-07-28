@@ -1,38 +1,215 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(62, 64, 73) !important;
+  color: #fff!important;
+  line-height: 20px!important;
+  font-family: "Raleway",Helvetica,Arial,sans-serif!important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.my_Nav {
+  margin-bottom: -100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+  position: unset!important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#site-title {
+  float: left;
+  clear: both;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.toggler {
+  position: relative;
+  display: block;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: -1px;
+  line-height: 41px;
+  height: 35px;
+  padding-right: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity .2s ease;
+  opacity: 1;
+}
+
+.inner {
+  padding-top: 120px;
+}
+
+#bio {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 60px;
+  border-radius: 4px;
+  background: #cf4858;
+}
+
+#bio h1, #bio p {
+  line-height: 25px;
+}
+#bio p {
+  margin: 0 0 15px;
+}
+
+#bio h1 {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+#bio:after {
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 34px solid transparent;
+  border-top: 23px solid #cf4858;
+  position: absolute;
+  bottom: -22px;
+  content: "";
+  display: block;
+  margin: 0 20px;
+  left: auto;
+  right: 28px;
+  transform: scaleX(1);
+}
+
+#bio a {
+  background: #ad2d3c;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+#connect, #projects {
+  width: 100%;
+  margin-bottom: 40px;
+}
+#connect:before, #projects:before {
+  content: " ";
+  display: table;
+}
+#connect:after, #projects:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+
+.group-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin: 0 0 20px 20px;
+}
+
+#connect ul, #projects ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 320px;
+  text-align: left;
+}
+
+.bubble {
+  transform: translateZ(0);
+  overflow: visible;
+}
+.bubble a {
+  transform: translateZ(0);
+  display: block;
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  transition: transform .2s ease!important;
+}
+.bubble h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 25px;
+  margin-bottom: 5px;
+}
+
+.bubble a :last-child {
+  margin-bottom: 0;
+}
+
+.bubble a p {
+  line-height: 20px;
+}
+@keyframes float-a {
+  50% {
+    transform: translateY(5px);
+}
+}
+@keyframes float-b {
+  0% {
+    transform: translateY(5px);
+}
+
+50% {
+    transform: translate(0);
+}
+100% {
+    transform: translateY(5px);
+}
+}
+
+.bubble.ml {
+  animation: float-a 1.5s ease-in-out infinite;
+}
+.bubble.datm {
+  -webkit-animation: float-b 1.8s ease-in-out infinite;
+  animation: float-b 1.8s ease-in-out infinite;
+}
+
+.bubble.ml a {
+  width: 187px;
+  background: #f6624a;
+}
+.bubble.datm a {
+  width: 220px;
+  background: #1b6a81;
+}
+
+
+.bubble.datm a:after, .bubble.ml a:after {
+  border-left: 0 solid transparent;
+  border-right: 28px solid transparent;
+}
+
+.bubble.ml a:after {
+  border-top: 17px solid #f6624a;
+  left: 1px;
+  right: auto;
+  transform: scaleX(-1);
+}
+.bubble.datm a:after {
+  border-top: 17px solid #1b6a81;
+  left: auto;
+  right: -1px;
+  transform: scaleX(1);
+}
+
+.bubble a:after {
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -17px;
+  content: "";
+  display: block;
+  margin: 0 20px;
+}
+#connect .bubble:nth-child(odd), #projects .bubble:nth-child(odd) {
+  float: left;
+}
+#connect .bubble:nth-child(2n), #projects .bubble:nth-child(2n) {
+  float: right;
 }
