@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Switch from '@mui/material/Switch';
+import PortfolioAssistant from './PortfolioAssistant';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -58,6 +59,7 @@ if(isTrue){
             <li className="bubble github"><a href="https://github.com/mandar95" title="Visit my GitHub profile" target="_blank" rel="noreferrer"><h2>GitHub</h2><p>The code.</p></a></li>
           </ul>
         </section>
+        <PortfolioAssistant />
         <figure id="rm-illu"><div className="illu"></div></figure>
         <footer><div><p id="copyright" style={{color:isTrue ?'#fff':'#343a40'}}>Mandar Jaurat © {new Date().getFullYear()}</p></div></footer>
       </div>

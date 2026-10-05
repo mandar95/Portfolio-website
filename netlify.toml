@@ -4,3 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+[dev]
+  command = "npm start"
+  targetPort = 3000

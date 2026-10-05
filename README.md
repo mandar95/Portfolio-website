@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Portfolio Assistant
+
+The portfolio Q&A widget uses a Netlify Function and the OpenAI API. Add an OpenAI API key to Netlify as the `OPENAI_API_KEY` environment variable. The model defaults to `gpt-4o-mini`; you can optionally set `OPENAI_MODEL`. Never put the API key in a `REACT_APP_*` variable or in frontend code.
+
+For local development, install the Netlify CLI and add `OPENAI_API_KEY` to a local `.env` file (which should not be committed). Start the app with `netlify dev` so both the React app and `/.netlify/functions/portfolio-assistant` are available. Add the key in Netlify's environment-variable settings before deploying for the hosted assistant to answer questions.
