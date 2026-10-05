@@ -9,6 +9,7 @@ const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
 function App() {
   const [isTrue, setTrue] = useState(true)
+  const experienceYears = new Date().getFullYear() - 2019
   useEffect(() => {
 if(isTrue){
   document.body.style.backgroundColor='#3e4049'
@@ -42,9 +43,9 @@ if(isTrue){
         <section id="projects">
           <h1 className="group-title project" style={{color:isTrue ?'#fff':'#343a40'}}>Let's talk</h1>
           <ul><li className="bubble ml"><a href="#projects"><h2>Education</h2><p>BSC IT(2017) from Mumbai University</p></a>
-          </li><li className="bubble datm"><a href="#projects"><h2>Work Experience</h2><p>7 year as Application Frontend Developer</p></a>
+          </li><li className="bubble datm"><a href="#projects"><h2>Experience</h2><p>{experienceYears}+ years of experience building web and mobile applications</p></a>
             </li><li className="bubble gtb"><a href="#projects"><h2>My Passion</h2><p>Web surfing, Dancing, Reading</p></a></li>
-            <li className="bubble mand"><a href="#projects"><h2>What i can do</h2><p>Javascript, Typescript, ReactJS, React Native, NodeJS, &amp; HTML5+CSS3</p></a></li>
+            <li className="bubble mand"><a href="#projects"><h2>What i can do</h2><p>Python, Javascript, Typescript, ReactJS, React Native, NodeJS</p></a></li>
           </ul>
         </section>
         <section id="connect" style={{ textAlign: 'left' }}>
@@ -58,7 +59,7 @@ if(isTrue){
           </ul>
         </section>
         <figure id="rm-illu"><div className="illu"></div></figure>
-        <footer><div><p id="copyright" style={{color:isTrue ?'#fff':'#343a40'}}>Mandar Jaurat © 2026</p></div></footer>
+        <footer><div><p id="copyright" style={{color:isTrue ?'#fff':'#343a40'}}>Mandar Jaurat © {new Date().getFullYear()}</p></div></footer>
       </div>
     </div>
   );
